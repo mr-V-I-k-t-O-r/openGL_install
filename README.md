@@ -1,13 +1,21 @@
 # This is tutorial how to install OpenGL library on ubuntu
 
+## About modules
+
+- #### GL - rendering
+- #### GLFW - window
+- #### GLAD - lowlevel commands
+- #### GLEW - 
+
+
 ## Install OpenGL
-### Install packages
+#### Install packages
 
 ```
 sudo apt install libopengl-dev libglfw3 libglfw3-dev
 ```
 
-### Get version of openGl
+#### Get version of openGl
 
 Copy to file:
 
@@ -39,7 +47,7 @@ and compile with options
 -lGL -lglfw 
 ```
 
-### Get GLAD
+#### Get GLAD
 
 go to [link](https://glad.dav1d.de)
 
@@ -49,7 +57,7 @@ click 'generate' button
 
 download .zip arch
 
-### Use glad in projects
+#### Use glad in projects
 
 go to directory with .zip archive of glad
 
@@ -64,4 +72,16 @@ now you can include glad with '<>'
 cp src to directory with your project
 ```
 cp src/* {path_to_your_project}
+```
+
+## Using
+
+After installation to use openGL you need to add 
+```
+-lGL -lglfw
+```
+To compilers options
+And add c source file 
+```
+glad.c
 ```
