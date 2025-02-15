@@ -12,7 +12,7 @@
 #### Install packages
 
 ```
-sudo apt install libopengl-dev libglfw3 libglfw3-dev
+sudo apt install libopengl-dev libglfw3 libglfw3-dev libglew-dev
 ```
 
 #### Get version of openGl
@@ -78,7 +78,7 @@ cp src/* {path_to_your_project}
 
 After installation to use openGL you need to add 
 ```
--lGL -lglfw
+-lGL -lglfw -lGLEW -lGLU
 ```
 To compilers options
 And add c source file 
