@@ -71,13 +71,13 @@ cd ./src/
 ```
 gcc -c glad.c -o glad.o
 ar rcs libglad.a glad.o
-mv libglad.a /usr/include/glad
+sudo mv /usr/include/glad/libglad.a /usr/lib/x86_64-linux-gnu/
 ```
 ##### if you have clang compiler
 ```
 clang -c glad.c -o glad.o
 ar rcs libglad.a glad.o
-mv libglad.a /usr/include/glad
+sudo mv /usr/include/glad/libglad.a /usr/lib/x86_64-linux-gnu/
 ```
 
 now you can include glad with '<>'
