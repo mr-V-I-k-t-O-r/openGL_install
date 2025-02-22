@@ -65,13 +65,25 @@ make command
 ```
 unzip glad.zip
 sudo cp include/* /usr/include -r
+cd ./src/
+```
+##### if you have gcc compiler
+```
+gcc -c glad.c -o glad.o
+ar rcs libglad.a glad.o
+mv libglad.a /usr/include/glad
+```
+##### if you have clang compiler
+```
+clang -c glad.c -o glad.o
+ar rcs libglad.a glad.o
+mv libglad.a /usr/include/glad
 ```
 
 now you can include glad with '<>'
-
-cp src to directory with your project
+add to makefile of your project
 ```
-cp src/* {path_to_your_project}
+-L /usr/include/glad
 ```
 
 ## Using
@@ -81,7 +93,3 @@ After installation to use openGL you need to add
 -lGL -lglfw -lGLEW -lGLU
 ```
 To compilers options
-And add c source file 
-```
-glad.c
-```
